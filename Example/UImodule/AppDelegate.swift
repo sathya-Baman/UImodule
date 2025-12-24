@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ) -> Bool {
             PrivacyScreenManager.shared.enableFeature()
 
-
             return true
         }
 
