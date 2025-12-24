@@ -1,0 +1,16 @@
+PODS:
+  - UImodule (0.1.0)
+
+DEPENDENCIES:
+  - UImodule (from `../`)
+
+EXTERNAL SOURCES:
+  UImodule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UImodule: d569737b9cbb8a82221a9dc7f019428a67d65b85
+
+PODFILE CHECKSUM: 6dfcf709124786860c6310732c736c80c06288ef
+
+COCOAPODS: 1.16.2

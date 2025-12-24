@@ -1,0 +1,6 @@
+framework module UImodule {
+  umbrella header "UImodule-umbrella.h"
+
+  export *
+  module * { export * }
+}

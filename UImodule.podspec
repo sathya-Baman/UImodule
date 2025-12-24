@@ -27,14 +27,19 @@ TODO: Add long description of the pod here.
   s.author           = { 'sathya-Baman' => 'sathyabaman.kanasalingam@e-jan.co.jp' }
   s.source           = { :git => 'https://github.com/sathya-Baman/UImodule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  
 
-  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'UImodule/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'UImodule' => ['UImodule/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'UImodule' => ['UImodule/Assets/*.png'],
+     'UImodule' => ['UImodule/Assets/*.xcassets'],
+     'UImodule' => ['UImodule/*.xcassets']
+     
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

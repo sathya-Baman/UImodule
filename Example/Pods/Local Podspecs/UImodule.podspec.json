@@ -1,0 +1,24 @@
+{
+  "name": "UImodule",
+  "version": "0.1.0",
+  "summary": "A short description of UImodule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sathya-Baman/UImodule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sathya-Baman": "sathyabaman.kanasalingam@e-jan.co.jp"
+  },
+  "source": {
+    "git": "https://github.com/sathya-Baman/UImodule.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "UImodule/Classes/**/*",
+  "swift_version": "5.0"
+}
