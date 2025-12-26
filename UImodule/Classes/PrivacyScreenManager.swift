@@ -64,35 +64,20 @@ public final class PrivacyScreenManager {
 
     // MARK: - Image Loading Helper
     private func loadImage(named name: String) -> UIImage? {
-        // 1) Try the framework/pod bundle where this class is defined
-        let classBundle = Bundle(for: PrivacyScreenManager.self)
-        if let img = UIImage(named: name, in: classBundle, compatibleWith: nil) {
-            return img
+        // 1) Find the resource bundle created by CocoaPods
+        let frameworkBundle = Bundle(for: PrivacyScreenManager.self)
+
+        guard let resourceBundleURL = frameworkBundle.url(
+            forResource: "UImoduleResources",
+            withExtension: "bundle"
+        ),
+        let resourceBundle = Bundle(url: resourceBundleURL)
+        else {
+            return nil
         }
 
-        // 2) Try the main bundle (app targets sometimes put assets there)
-        if let img = UIImage(named: name) {
-            return img
-        }
-
-        // 3) Try direct file lookup in the class bundle for common extensions
-        let candidates = ["png", "jpg", "jpeg"]
-        for ext in candidates {
-            if let path = classBundle.path(forResource: name, ofType: ext),
-               let img = UIImage(contentsOfFile: path) {
-                return img
-            }
-        }
-
-        // 4) As a last resort, try main bundle file lookup
-        for ext in candidates {
-            if let path = Bundle.main.path(forResource: name, ofType: ext),
-               let img = UIImage(contentsOfFile: path) {
-                return img
-            }
-        }
-
-        return nil
+        // 2) Load image from that bundle
+        return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
     }
 
     // MARK: - Background / Foreground
